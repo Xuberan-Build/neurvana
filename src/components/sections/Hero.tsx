@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { heroContent } from '@/data/content';
 
 export const Hero = () => {
@@ -39,12 +40,29 @@ export const Hero = () => {
             </p>
             
             <div className="flex flex-wrap gap-4 pt-4">
-              <button className="hero-cta-primary">
+              <a
+                href="https://calendly.com/neurvanaglobal"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-cta-primary"
+              >
                 Book a Session
-              </button>
-              <button className="hero-cta-secondary">
+              </a>
+              <a
+                href="#services"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const el = document.getElementById('services');
+                  if (el) {
+                    const headerOffset = 80;
+                    const top = el.getBoundingClientRect().top + window.scrollY - headerOffset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                  }
+                }}
+                className="hero-cta-secondary"
+              >
                 Explore Services
-              </button>
+              </a>
             </div>
           </div>
 
@@ -61,14 +79,15 @@ export const Hero = () => {
                 {/* Inner glow */}
                 <div className="absolute inset-16 rounded-full bg-gradient-to-br from-white via-sage-50/50 to-accent-50/50 shadow-inner" />
                 
-                {/* Center focal point - image placeholder */}
-                <div className="absolute inset-24 rounded-full bg-white shadow-soft flex items-center justify-center overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-sage-200/20 via-accent-200/20 to-copper-200/20 flex items-center justify-center">
-                    <div className="text-center space-y-2 p-8">
-                      <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-sage-400/30 to-accent-400/30 animate-pulse" />
-                      <p className="text-xs text-primary-400 font-light">[Image placeholder]</p>
-                    </div>
-                  </div>
+                {/* Center focal point - hero image */}
+                <div className="absolute inset-24 rounded-full bg-white shadow-soft overflow-hidden">
+                  <Image
+                    src="/images/Neurvana-hero.png"
+                    alt="NeurVana neurosomatic therapy"
+                    fill
+                    className="object-cover object-center"
+                    priority
+                  />
                 </div>
                 
                 {/* Floating accent dots */}

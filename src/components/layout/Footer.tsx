@@ -1,6 +1,22 @@
 'use client';
 
-import Link from 'next/link';
+const scrollToSection = (sectionId: string) => {
+  if (typeof document === 'undefined') return;
+  const el = document.getElementById(sectionId);
+  if (!el) return;
+  const headerOffset = 80;
+  const rect = el.getBoundingClientRect();
+  const offset = rect.top + window.scrollY - headerOffset;
+  window.scrollTo({ top: offset, behavior: 'smooth' });
+};
+
+const footerLinks = [
+  { label: 'About', sectionId: 'mission' },
+  { label: 'Services', sectionId: 'services' },
+  { label: 'Research', sectionId: 'values' },
+  { label: 'Insights', sectionId: 'newsletter' },
+  { label: 'Contact', sectionId: 'footer' },
+];
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,14 +37,18 @@ export const Footer = () => {
               Quick Links
             </h4>
             <ul className="space-y-2">
-              {['About', 'Services', 'Research', 'Blog', 'Contact'].map((link) => (
-                <li key={link}>
-                  <Link
-                    href={`/${link.toLowerCase()}`}
-                    className="text-nv-text-soft hover:text-nv-accent transition-colors text-sm"
+              {footerLinks.map((link) => (
+                <li key={link.label}>
+                  <a
+                    href={`#${link.sectionId}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(link.sectionId);
+                    }}
+                    className="text-nv-text-soft hover:text-nv-accent transition-colors text-sm cursor-pointer"
                   >
-                    {link}
-                  </Link>
+                    {link.label}
+                  </a>
                 </li>
               ))}
             </ul>

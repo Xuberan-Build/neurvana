@@ -14,9 +14,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
 /* Hero gradient orbs */
 .hero-orb-1 {
@@ -166,6 +163,7 @@ html {
 }
 
 .service-card-button {
+  display: block;
   width: 100%;
   padding: 1.25rem;
   background: #556650;
@@ -178,6 +176,8 @@ html {
   letter-spacing: 0.05em;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
 }
 
 .service-card-button:hover {
@@ -220,6 +220,7 @@ html {
 
 /* Hero CTA Buttons */
 .hero-cta-primary {
+  display: inline-block;
   padding: 1.25rem 2.5rem;
   background: linear-gradient(135deg, #556650 0%, #445241 100%);
   color: white;
@@ -229,6 +230,7 @@ html {
   font-weight: 600;
   text-transform: none;
   letter-spacing: 0.025em;
+  text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 10px 30px rgba(85, 102, 80, 0.4);
@@ -241,6 +243,7 @@ html {
 }
 
 .hero-cta-secondary {
+  display: inline-block;
   padding: 1.25rem 2.5rem;
   background: transparent;
   color: #556650;
@@ -250,6 +253,7 @@ html {
   font-weight: 600;
   text-transform: none;
   letter-spacing: 0.025em;
+  text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -262,6 +266,7 @@ html {
 
 /* Hero CTA Buttons */
 .hero-cta-primary {
+  display: inline-block;
   padding: 1.25rem 2.5rem;
   background: linear-gradient(135deg, #556650 0%, #445241 100%);
   color: white;
@@ -271,6 +276,7 @@ html {
   font-weight: 600;
   text-transform: none;
   letter-spacing: 0.025em;
+  text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 10px 30px rgba(85, 102, 80, 0.4);
@@ -283,6 +289,7 @@ html {
 }
 
 .hero-cta-secondary {
+  display: inline-block;
   padding: 1.25rem 2.5rem;
   background: transparent;
   color: #556650;
@@ -292,6 +299,7 @@ html {
   font-weight: 600;
   text-transform: none;
   letter-spacing: 0.025em;
+  text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
 }

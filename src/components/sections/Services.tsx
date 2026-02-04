@@ -10,7 +10,7 @@ interface ServicesProps {
 
 export const Services = ({ onServiceClick }: ServicesProps) => {
   return (
-    <section className="py-24 lg:py-32 bg-gradient-to-b from-white via-sand-50 to-white relative overflow-hidden">
+    <section id="services" className="py-24 lg:py-32 bg-gradient-to-b from-white via-sand-50 to-white relative overflow-hidden">
       {/* Subtle background decoration */}
       <div className="absolute top-20 right-0 w-96 h-96 bg-sage-200/20 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-0 w-96 h-96 bg-accent-200/20 rounded-full blur-3xl" />

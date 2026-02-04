@@ -35,12 +35,14 @@ export const ServiceCard = ({ service, onLearnMore }: ServiceCardProps) => {
           ))}
         </div>
         
-        <button 
-          onClick={() => onLearnMore?.(service)}
+        <a
+          href={service.bookingUrl || 'https://calendly.com/neurvanaglobal'}
+          target="_blank"
+          rel="noopener noreferrer"
           className="service-card-button"
         >
-          Learn More
-        </button>
+          Book
+        </a>
       </div>
     </div>
   );

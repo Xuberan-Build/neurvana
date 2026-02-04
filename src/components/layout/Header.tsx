@@ -92,13 +92,18 @@ export const Header = () => {
                 {link.label}
               </a>
             ))}
-            <Button
-              variant="primary"
-              size="sm"
-              onClick={() => scrollToSection('services')}
+            <a
+              href="https://calendly.com/neurvanaglobal"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Book
-            </Button>
+              <Button
+                variant="primary"
+                size="sm"
+              >
+                Book
+              </Button>
+            </a>
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -141,16 +146,20 @@ export const Header = () => {
                 </a>
               ))}
               <div className="pt-4">
-                <Button
-                  variant="primary"
-                  className="w-full"
-                  onClick={() => {
-                    setIsMobileMenuOpen(false);
-                    scrollToSection('services');
-                  }}
+                <a
+                  href="https://calendly.com/neurvanaglobal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Book a Session
-                </Button>
+                  <Button
+                    variant="primary"
+                    className="w-full"
+                  >
+                    Book a Session
+                  </Button>
+                </a>
               </div>
             </div>
           </nav>

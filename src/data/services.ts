@@ -15,7 +15,8 @@ export const services: Service[] = [
       'Reprograms stress response patterns'
     ],
     idealFor: 'Clients who feel stuck in "go mode" and need a structured reset',
-    featured: true
+    featured: true,
+    bookingUrl: 'https://calendly.com/neurvanaglobal/neural-reset-clone'
   },
   {
     id: 'neurosomatic-realignment',
@@ -32,7 +33,8 @@ export const services: Service[] = [
       'Establishes internal regulation'
     ],
     idealFor: 'High-performance clients, chronic pain, or stress-driven professionals',
-    featured: true
+    featured: true,
+    bookingUrl: 'https://calendly.com/neurvanaglobal/neural-reset-clone?back=1'
   },
   {
     id: 'homeostasis-membership',
@@ -49,6 +51,7 @@ export const services: Service[] = [
       'Educational resources'
     ],
     idealFor: 'Clients committed to sustained nervous system health and long-term transformation',
-    featured: true
+    featured: true,
+    bookingUrl: 'https://calendly.com/neurvanaglobal'
   }
 ];

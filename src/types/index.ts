@@ -10,6 +10,7 @@ export interface Service {
   benefits: string[];
   idealFor: string;
   featured?: boolean;
+  bookingUrl?: string;
 }
 
 export interface Testimonial {
